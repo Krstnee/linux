@@ -1,0 +1,13 @@
+import socket
+import pickle
+
+sock = socket.socket()
+
+sock.connect(('localhost', 4040))
+msg='hello'
+#msg = [1, 2, 3, 3, 4, 5, 6, 7, 8]
+#msg = pickle.dumps(msg)
+#print(msg)
+sock.send(msg.encode())
+
+sock.close()
